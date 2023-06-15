@@ -156,3 +156,4 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone35/temp"
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_DEVICE_VERSION := Nubia_NX729J-A13
+TW_NO_HAPTICS := true
