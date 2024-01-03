@@ -1,0 +1,21 @@
+on late-fs
+    chmod 0666 /dev/awinic_haptic
+    chmod 0666 /dev/awinic_x_haptic
+    chown system system /dev/aac_richtap_dev
+    chown system system /dev/awinic_haptic
+    chown system system /dev/awinic_x_haptic
+service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
+    class hal
+    user system
+    group system input
+
+    setenv RICHTAP_DEVICE_PATH  /dev/awinic_haptic;/dev/awinic_x_haptic
+    setenv ENV_RICHTAP_CONFIG_PATH /odm/etc/aac_richtap.config;/odm/etc/aac_richtap_1.config
+
+on property:sys.boot_completed=1
+    setprop vendor.haptic.calibrate.done 1
+    stop vendor.qti.vibrator
+    start vendor.qti.vibrator
+
+# on late-init
+#    write /sys/class/leds/vibrator/trigger "transient"
