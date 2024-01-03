@@ -17,6 +17,7 @@
 /vbmeta_system         emmc    /dev/block/bootdevice/by-name/vbmeta_system                        flags=display="vbmeta_system";slotselect;backup=1;flashimg=1
 /logo                  emmc    /dev/block/bootdevice/by-name/logo                                 flags=display="logo";backup=1;flashimg=1
 /misc                  emmc    /dev/block/bootdevice/by-name/misc                                 flags=display="misc";backup=1;flashimg=1
+/system                ext4    /dev/block/bootdevice/by-name/system                               flags=backup=1;slotselect;display="System";flashimg=1
 
 # Persistent Firmware & Properties
 /persist               ext4    /dev/block/bootdevice/by-name/persist                              flags=display="Persist"
