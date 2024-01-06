@@ -15,7 +15,7 @@
 //
 
 cc_library {
-    name: "bootctrl.xiaomi_sm8550",
+    name: "bootctrl.nubia_sm8550",
     defaults: ["bootctrl_hal_defaults"],
     static_libs: ["libgptutils.nubia_sm8550"],
 }
