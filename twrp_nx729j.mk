@@ -12,6 +12,8 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 # Release name
 PRODUCT_RELEASE_NAME := nx729j
 
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/nubia/nx729j/recovery/root,recovery/root)
+
 ## Device identifier
 PRODUCT_DEVICE := nx729j
 PRODUCT_NAME := twrp_nx729j
